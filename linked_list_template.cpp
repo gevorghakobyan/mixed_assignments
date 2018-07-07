@@ -30,10 +30,10 @@ private:
 public:
 	List();
 	~List();
-	void insert(int position, T value);
+	void insert(int position, const T& value);
 	void display();
 	void remove(int position);
-	void find(T value);
+	void find(const T& value);
 };
 
 
