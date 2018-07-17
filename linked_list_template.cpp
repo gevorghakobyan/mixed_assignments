@@ -30,10 +30,10 @@ private:
 public:
 	List();
 	~List();
-	void insert(int position, T value);
+	void insert(int position, const T& value);
 	void display();
 	void remove(int position);
-	void find(T value);
+	void find(const T& value);
 };
 
 
@@ -94,7 +94,7 @@ List<T>::~List()
 
 //inserts the given T value at the specified position in the list
 template <typename T>
-void List<T>::insert(int position, T value)
+void List<T>::insert(int position, const T& value)
 {
 	if (position > m_list_size)
 	{
@@ -170,7 +170,7 @@ void List<T>::remove(int position)
 
 //finds the node with the specified T value and prints the nodes index
 template <typename T>
-void List<T>::find(T value)
+void List<T>::find(const T& value)
 {	
 	int position = 0;
 	Node<T>* current = m_head;
