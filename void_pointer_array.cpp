@@ -19,5 +19,11 @@ int main()
 	std::cout << "double = " << *(static_cast<double*> (array[1])) << std::endl;
 	std::cout << "bool = " << *(static_cast<bool*> (array[2])) << std::endl;
 
+	for (int i = 0; i < 3; ++i)
+	{
+		array[i] = nullptr;
+	};
+
 	return 0;
 };
+
